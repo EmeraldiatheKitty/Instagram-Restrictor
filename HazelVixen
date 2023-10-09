@@ -1,4 +1,4 @@
-*InstagramAPI
+# *InstagramAPI
 
 
 restrict(targetUserId: 6052362585 | string): Promise<RestrictActionRepositoryRestrictResponseRootObject> {
@@ -9,3 +9,4 @@ restrict(targetUserId: 6052362585 | string): Promise<RestrictActionRepositoryRes
         _csrftoken: this.client.state.cookieCsrfToken,
         _uuid: this.client.state.uuid,
         target_user_id: 6052362585
+#
