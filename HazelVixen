@@ -1,12 +1,12 @@
-# *InstagramAPI
-
-
-restrict(targetUserId: 6052362585 | string): Promise<RestrictActionRepositoryRestrictResponseRootObject> {
+restrict(targetUserId: number | string): Promise<RestrictActionRepositoryRestrictResponseRootObject> {
     const { body } = await this.client.request.send<RestrictActionRepositoryRestrictResponseRootObject>({
       url: '/api/v1/restrict_action/restrict/',
       method: 'POST',
       form: {
         _csrftoken: this.client.state.cookieCsrfToken,
         _uuid: this.client.state.uuid,
-        target_user_id: 6052362585
-#
+        target_user_id: targetUserId,
+      },
+    });
+    return body;
+  }
