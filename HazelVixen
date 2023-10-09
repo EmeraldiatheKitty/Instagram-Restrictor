@@ -1,5 +1,4 @@
-export class RestrictActionRepository extends Repository {
-  public async restrict(targetUserId: 6052362585 | string): Promise<RestrictActionRepositoryRestrictResponseRootObject> {
+{ Repository } from '../core/repository';restrict(targetUserId: 6052362585 | string): Promise<RestrictActionRepositoryRestrictResponseRootObject> {
     const { body } = await this.client.request.send<RestrictActionRepositoryRestrictResponseRootObject>({
       url: '/api/v1/restrict_action/restrict/',
       method: 'POST',
